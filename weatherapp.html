@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="weather.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>weather App</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="weather-card">
+			
+			<h3>
+				Weather App
+			</h3>
+			<input type="text" id="city-input" placeholder="Enter city name">
+			<button id="city-input-btn">Get Weather</button>
+			<div id="weather-info" class="animate"> 
+				<h3 id="city-name"></h3>
+				<p id="date"></p>
+				
+				<li>
+					<i class="fa-solid fa-cloud"></i>
+					<a href="#"></a>
+				</li>
+				<p id="temperature"></p>
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://momentjs.com/downloads/moment.min.js"></script> 
+	<script src="weather.js"></script>
+	<script>
+		
+		$('#city-input-btn').on('click', function() {
+			let cityName = $('#city-input').val();
+			weatherFn(cityName);
+		});
+	</script>
+</body>
+</html>
